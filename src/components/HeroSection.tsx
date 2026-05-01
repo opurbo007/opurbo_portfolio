@@ -1,0 +1,105 @@
+"use client";
+import { Github, Linkedin, ArrowRight, Download } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
+export function HeroSection() {
+  const words = [
+    { text: "Full" },
+    { text: "Stack" },
+    { text: "MERN", className: "text-purple-500 dark:text-purple-400" },
+    { text: "+" },
+    { text: "Next.js", className: "text-purple-500 dark:text-purple-400" },
+    { text: "Developer" },
+  ];
+
+  return (
+    <div className="min-h-[90vh] flex items-center justify-center px-6">
+      <div className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        {/* Left: Text Content */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 flex-1">
+          {/* Greeting badge */}
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+            Available for work
+          </span>
+
+          {/* Name */}
+          <div>
+            <p className="text-neutral-500 dark:text-neutral-400 text-sm sm:text-base mb-1 tracking-widest uppercase">
+              Hi, I&apos;m
+            </p>
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-purple-200 to-purple-500 bg-clip-text text-transparent dark:from-white dark:via-purple-200 dark:to-purple-400">
+              Opu Pal
+            </h1>
+          </div>
+
+          {/* Typewriter role */}
+          <div className="-my-2">
+            <TypewriterEffectSmooth words={words} />
+          </div>
+
+          {/* Bio */}
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm sm:text-base max-w-md leading-relaxed">
+            Building fast, scalable web apps with React, Next.js, Node &
+            MongoDB. Turning ideas into clean, production-ready products.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <Link href={"/contact"}>
+              <button className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-purple-500/25">
+                Hire Me <ArrowRight size={16} />
+              </button>
+            </Link>
+            <Link href={"/opuPal.pdf"} target="_blank">
+              <button className="flex items-center gap-2 px-6 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm font-medium transition-all duration-200">
+                Resume <Download size={16} />
+              </button>
+            </Link>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-4">
+            <Link
+              href={"https://github.com/opurbo007"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
+            >
+              <Github size={16} /> GitHub
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/opu-pal-9b72a52b0/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
+            >
+              <Linkedin size={16} /> LinkedIn
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: Photo */}
+        <div className="relative flex-shrink-0">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+            {/* Glow ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-600 to-blue-500 blur-2xl opacity-30 scale-110" />
+            {/* Border ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 p-[3px]">
+              <div className="w-full h-full rounded-full bg-background" />
+            </div>
+            {/* Photo */}
+            <Image
+              src={"/me.jpg"}
+              alt="Opu Pal"
+              fill
+              className="rounded-full object-cover p-[4px]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
