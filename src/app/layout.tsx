@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import AnimatedFavicon from "@/components/AnimatedFav";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,7 @@ export default function RootLayout({
           <Navbar />
           <Toaster position="top-center" />
           {children}
-          <Footer />
+          <Footer /> <BackToTop />
         </ThemeProvider>
       </body>
     </html>
