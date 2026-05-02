@@ -1,0 +1,183 @@
+[
+  {
+    "_id": "14",
+    "name": "Bond Wallet",
+    "description": "Prize bond list and checker with next.js, tailwind and shadcn/ui.",
+    "stack": ["Next.js", "Tailwind", "Shadcn/UI", "MongoDB"],
+    "git": "https://github.com/opurbo007/prize-bond-checker",
+    "live": "https://bondwallet.vercel.app",
+    "imagePath": "/temp/project17.png"
+  },
+  {
+    "_id": "14",
+    "name": "Remote office Manager",
+    "description": "Remote office management app with next.js,postgresql,tailwind,react-icons.",
+    "stack": ["Next.js", "PostgreSQL", "Tailwind", "React-icons"],
+    "git": "https://github.com/opurbo007/remote-office-manager",
+    "imagePath": "/temp/project16.png"
+  },
+
+  {
+    "_id": "14",
+    "name": "Daily Task",
+    "description": "Advance personal task manager with next.js, tailwind, and react-icons.",
+    "stack": ["Next.js", "PostgreSQL", "Tailwind", "Prisma ORM"],
+    "git": "https://github.com/opurbo007/daily-task",
+    "live": "https://justdoeverything.vercel.app/",
+    "imagePath": "/temp/project15.png"
+  },
+  {
+    "_id": "14",
+    "name": "Finace Tracker",
+    "description": "Personal finance tracker with PWA enabled, next.js, tailwind, and mongodb.",
+    "stack": ["Next.js", "MongoDB", "Tailwind", "PWA enabled"],
+    "git": "https://github.com/opurbo007/finance-tracker",
+    "live": "https://trackerfi.vercel.app/",
+    "imagePath": "/temp/project1.png"
+  },
+  {
+    "_id": "14",
+    "name": "Website speed tester",
+    "description": "Tool for testing and improving website loading speeds.",
+    "stack": ["React", "Tailwind", "Electron"],
+    "git": "https://github.com/opurbo007/security-scanner",
+    "imagePath": "/temp/project21.png"
+  },
+  {
+    "_id": "14",
+    "name": "me&u (Cook together)",
+    "description": "Video calling website with cooking recipes.",
+    "stack": ["React", "TypeScript", "Tailwind"],
+    "git": "https://github.com/opurbo007/recipe_video",
+    "live": "https://me-and-u.vercel.app/",
+    "imagePath": "/temp/project22.png"
+  },
+  {
+    "_id": "14",
+    "name": "Drive Academy",
+    "description": "Attandance system for driving school with pwa enabled, next.js, tailwind, and mongodb.",
+    "stack": ["Next.js", "Tailwind", "Electron"],
+    "git": "https://github.com/opurbo007/drive-academy",
+    "live": "https://ttc19.vercel.app/",
+    "imagePath": "/temp/project18.png"
+  },
+  {
+    "_id": "14",
+    "name": "Portfolio",
+    "description": "Personal portfolio built with Next.js, MongoDB, Shadcn & Aceternity UI.",
+    "stack": ["Next.js", "TypeScript", "MongoDB", "Tailwind", "Aceternity UI"],
+    "git": "https://github.com/opurbo007/portfolio",
+    "live": "https://portfolio-theta-hazel-45.vercel.app/",
+    "imagePath": "/temp/project19.png"
+  },
+  {
+    "_id": "13",
+    "name": "ShowBox",
+    "description": "Movie & TV discovery app with TMDB API, Redux and SCSS.",
+    "stack": ["React", "Redux", "TMDB API", "SCSS"],
+    "git": "https://github.com/opurbo007/showbox",
+    "live": "https://showbox-two.vercel.app/",
+    "imagePath": "/temp/project13.png"
+  },
+
+  {
+    "_id": "12",
+    "name": "Qoo-Media",
+    "description": "YouTube-like streaming app with RapidAPI, search & channel browsing.",
+    "stack": ["React", "RapidAPI", "Material UI"],
+    "git": "https://github.com/opurbo007/Qoo-media/",
+    "live": "https://qoo-media.vercel.app/",
+    "imagePath": "/temp/project2.png"
+  },
+  {
+    "_id": "11",
+    "name": "Weather App",
+    "description": "Real-time weather app with OpenWeather API, city search & forecast.",
+    "stack": ["Vue.js", "OpenWeather API", "CSS"],
+    "git": "https://github.com/opurbo007/Weather-With-VUE-JS",
+    "live": "https://weather000.netlify.app/",
+    "imagePath": "/temp/project3.png"
+  },
+  {
+    "_id": "10",
+    "name": "Routine Management",
+    "description": "Academic scheduler with PDF export, email notifications & RBAC.",
+    "stack": ["PHP", "MySQL", "Tailwind", "PHPMailer"],
+    "git": "https://github.com/opurbo007/Routine",
+    "imagePath": "/temp/project5.png"
+  },
+  {
+    "_id": "9",
+    "name": "Haven Store",
+    "description": "Full-stack e-commerce with Sanity CMS, Stripe payments & TypeScript.",
+    "stack": ["Next.js", "TypeScript", "Sanity", "Stripe", "Tailwind"],
+    "git": "https://github.com/opurbo007/havenstore",
+    "imagePath": "/temp/project6.png"
+  },
+  {
+    "_id": "8",
+    "name": "EventX",
+    "description": "Event discovery and management platform with React & Tailwind.",
+    "stack": ["React", "Tailwind"],
+    "git": "https://github.com/opurbo007/eventx",
+    "live": "https://eventx-zeta.vercel.app/",
+    "imagePath": "/temp/project14.png"
+  },
+  {
+    "_id": "7",
+    "name": "Leisure Life",
+    "description": "Tour & travel site with destination showcase & booking inquiries.",
+    "stack": ["HTML", "Tailwind", "PHP", "MySQL"],
+    "git": "https://github.com/opurbo007/tour_website",
+    "imagePath": "/temp/project4.png"
+  },
+  {
+    "_id": "6",
+    "name": "Amar Fosol",
+    "description": "Agriculture marketplace connecting farmers with buyers.",
+    "stack": ["PHP", "MySQL", "JavaScript"],
+    "git": "https://github.com/opurbo007/farmar",
+    "imagePath": "/temp/project8.png"
+  },
+  {
+    "_id": "5",
+    "name": "Pure Fashion",
+    "description": "E-commerce fashion site with catalog, cart & order management.",
+    "stack": ["PHP", "MySQL", "JavaScript"],
+    "git": "https://github.com/opurbo007/pure_fashion-an-e-commerce-website-",
+    "imagePath": "/temp/project9.png"
+  },
+  {
+    "_id": "4",
+    "name": "Student Portal",
+    "description": "Student management system with auth, grades & admin dashboard.",
+    "stack": ["HTML", "PHP", "MySQL", "JavaScript"],
+    "git": "https://github.com/opurbo007/student_panal",
+    "imagePath": "/temp/project10.png"
+  },
+  {
+    "_id": "3",
+    "name": "Be Green",
+    "description": "Nursery management with product listings & admin panel.",
+    "stack": ["HTML", "CSS", "PHP", "MySQL"],
+    "git": "https://github.com/opurbo007/Nursary-Management",
+    "imagePath": "/temp/project11.png"
+  },
+  {
+    "_id": "2",
+    "name": "Tea Station",
+    "description": "Responsive landing page for a tea shop with modern interactions.",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "git": "https://github.com/opurbo007/Project-I-Tea-Station-",
+    "imagePath": "/temp/project7.png"
+  },
+  {
+    "_id": "1",
+    "name": "Tom & Jerry Game",
+    "description": "Fun browser game built with vanilla JavaScript.",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "git": "https://github.com/opurbo007/Tom-Jerry-Game",
+
+    "imagePath": "/temp/project12.png"
+  }
+]

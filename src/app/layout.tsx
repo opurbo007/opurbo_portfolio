@@ -5,12 +5,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import AnimatedFavicon from "@/components/AnimatedFav";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Opurbo || Portfolio",
-  description: "A modern portfolio",
+  description: "A portfolio website for Opu Pal (Opurbo)",
 };
 
 export default function RootLayout({
@@ -27,6 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AnimatedFavicon />
           <Navbar />
           <Toaster position="top-center" />
           {children}
