@@ -12,11 +12,15 @@ interface ProjectItem {
   imagePath: string;
 }
 
-const featuredProjects: ProjectItem[] = [
-  { _id: 1, name: "ShowBox", git: "https://github.com/opurbo007/showbox", imagePath: "/temp/project13.png", live: "https://showbox-two.vercel.app/" },
-  { _id: 2, name: "Qoo-Media", git: "https://github.com/opurbo007/Qoo-media", live: "https://qoo-media.vercel.app/", imagePath: "/temp/project2.png" },
-  { _id: 3, name: "Haven Store", git: "https://github.com/opurbo007/havenstore", imagePath: "/temp/project6.png" },
-];
+import projectData from "@/data/project.json";
+
+const featuredProjects: ProjectItem[] = projectData.slice(0, 3).map((item) => ({
+  _id: parseInt(item._id),
+  name: item.name,
+  git: item.git || "#",
+  live: item.live || undefined,
+  imagePath: item.imagePath,
+}));
 
 export default function Home() {
   return (
