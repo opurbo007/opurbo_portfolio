@@ -25,7 +25,7 @@ const Footer = () => {
             <Link
               key={item.title}
               href={item.path}
-              className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               {item.title}
             </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
               key={i}
               href={social.href}
               target={social.href.startsWith("mailto") ? undefined : "_blank"}
-              className="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-purple-400 dark:hover:border-purple-500/50 hover:text-purple-600 dark:hover:text-purple-400 text-neutral-600 dark:text-neutral-400 transition-all"
+              className="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-blue-400 dark:hover:border-blue-500/50 hover:text-blue-600 dark:hover:text-blue-400 text-neutral-600 dark:text-neutral-400 transition-all"
             >
               {social.icon}
             </Link>

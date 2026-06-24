@@ -17,7 +17,7 @@ const About = () => {
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-12">
         {/* Photo */}
         <div className="relative flex-shrink-0 w-56 h-56 sm:w-64 sm:h-64">
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-500 blur-xl opacity-20" />
+          <div className="absolute inset-0 rounded-2xl bg-gray-50 dark:bg-gray-800 blur-xl opacity-20" />
           <Image
             src={"/me.jpg"}
             height={300}
@@ -31,33 +31,33 @@ const About = () => {
         <div className="flex flex-col gap-5 flex-1 max-w-lg">
           <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed text-sm sm:text-base">
             I&apos;m a Full Stack Developer at{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">Techy&apos;s IT</span>{" "}
+            <span className="text-blue-600 dark:text-blue-400 font-medium">Techy&apos;s IT</span>{" "}
             with 2 years of professional experience building scalable web and desktop apps. I specialize
             in Next.js, React, Node.js, and Electron — with a focus on offline-first systems, secure
             authentication, and clean TypeScript codebases.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Card className="border border-purple-200 dark:border-purple-500/20 bg-purple-50 dark:bg-purple-500/5 hover:border-purple-400 dark:hover:border-purple-500/40 transition-colors shadow-sm">
+            <Card className="border border-blue-200 dark:border-blue-500/20 bg-blue-50 dark:bg-blue-500/5 hover:border-blue-400 dark:hover:border-blue-500/40 transition-colors shadow-sm">
               <CardHeader className="pb-3">
-                <Briefcase className="text-purple-600 dark:text-purple-500 mb-1" size={18} />
+                <Briefcase className="text-blue-600 dark:text-blue-500 mb-1" size={18} />
                 <CardTitle className="text-sm font-semibold">Experience</CardTitle>
                 <CardDescription className="text-xs leading-relaxed">
                   Full Stack Developer
                   <br />
-                  <span className="text-purple-600 dark:text-purple-400">Techy&apos;s IT · 2024 – Present</span>
+                  <span className="text-blue-600 dark:text-blue-400">Techy&apos;s IT · 2024 – Present</span>
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="border border-purple-200 dark:border-purple-500/20 bg-purple-50 dark:bg-purple-500/5 hover:border-purple-400 dark:hover:border-purple-500/40 transition-colors shadow-sm">
+            <Card className="border border-blue-200 dark:border-blue-500/20 bg-blue-50 dark:bg-blue-500/5 hover:border-blue-400 dark:hover:border-blue-500/40 transition-colors shadow-sm">
               <CardHeader className="pb-3">
-                <GraduationCap className="text-purple-600 dark:text-purple-500 mb-1" size={18} />
+                <GraduationCap className="text-blue-600 dark:text-blue-500 mb-1" size={18} />
                 <CardTitle className="text-sm font-semibold">Education</CardTitle>
                 <CardDescription className="text-xs leading-relaxed">
                   B.Sc. in CSE · 2019–2023
                   <br />
-                  <span className="text-purple-600 dark:text-purple-400">Dhaka International University</span>
+                  <span className="text-blue-600 dark:text-blue-400">Dhaka International University</span>
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -73,7 +73,7 @@ const About = () => {
           </div>
 
           <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-            <MapPin size={14} className="text-purple-500 dark:text-purple-400" />
+            <MapPin size={14} className="text-blue-500 dark:text-blue-400" />
             <span>Jamalpur, Bangladesh · Open to remote opportunities</span>
           </div>
         </div>

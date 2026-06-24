@@ -9,9 +9,9 @@ export function HeroSection() {
   const words = [
     { text: "Full" },
     { text: "Stack" },
-    { text: "MERN", className: "text-purple-600 dark:text-purple-400" },
+    { text: "MERN", className: "text-blue-600 dark:text-blue-400" },
     { text: "+" },
-    { text: "Next.js", className: "text-purple-600 dark:text-purple-400" },
+    { text: "Next.js", className: "text-blue-600 dark:text-blue-400" },
     { text: "Developer" },
   ];
 
@@ -21,8 +21,8 @@ export function HeroSection() {
         {/* Left: Text */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 flex-1">
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-300 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-400 text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-300 dark:border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             Available for work
           </span>
 
@@ -31,7 +31,7 @@ export function HeroSection() {
             <p className="text-neutral-500 dark:text-neutral-400 text-sm sm:text-base mb-1 tracking-widest uppercase">
               Hi, I&apos;m
             </p>
-            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight bg-gradient-to-r from-neutral-900 via-purple-700 to-purple-500 bg-clip-text text-transparent dark:from-white dark:via-purple-200 dark:to-purple-400">
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
               Opu Pal
             </h1>
           </div>
@@ -51,7 +51,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link href="/#contact">
-              <button className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-purple-200 dark:shadow-purple-500/25">
+              <button className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-blue-200 dark:shadow-blue-500/25">
                 Hire Me <ArrowRight size={16} />
               </button>
             </Link>
@@ -68,7 +68,7 @@ export function HeroSection() {
               href="https://github.com/opurbo007"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
             >
               <Github size={16} /> GitHub
             </Link>
@@ -76,7 +76,7 @@ export function HeroSection() {
               href="https://www.linkedin.com/in/opu-pal-9b72a52b0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 text-neutral-700 dark:text-neutral-300 transition-all duration-200 text-sm"
             >
               <Linkedin size={16} /> LinkedIn
             </Link>

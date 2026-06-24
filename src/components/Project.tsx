@@ -30,8 +30,8 @@ const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
               className="group relative w-[20rem] rounded-2xl
                 border border-neutral-200 dark:border-neutral-800
                 bg-white dark:bg-neutral-950/60
-                hover:border-purple-400 dark:hover:border-purple-500/50
-                hover:shadow-xl hover:shadow-purple-200 dark:hover:shadow-purple-500/10
+                hover:border-blue-400 dark:hover:border-blue-500/50
+                hover:shadow-xl hover:shadow-blue-200 dark:hover:shadow-blue-500/10
                 transition-all duration-300"
             >
               {/* Thumbnail */}
@@ -42,7 +42,7 @@ const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-neutral-950 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900" />
               </div>
 
               {/* Content */}
@@ -57,7 +57,7 @@ const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg
                       border border-neutral-300 dark:border-neutral-700
-                      hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400
+                      hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400
                       text-xs font-medium transition-all duration-200
                       text-neutral-700 dark:text-neutral-300"
                   >
@@ -68,7 +68,7 @@ const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
                       href={item.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium transition-all duration-200"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition-all duration-200"
                     >
                       <ExternalLink size={13} /> Live Demo
                     </Link>
@@ -87,7 +87,7 @@ const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
         href="/project"
         className="text-sm font-medium px-4 py-2 rounded-lg
     border border-neutral-300 dark:border-neutral-700
-    hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400
+    hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400
     transition-all duration-200"
       >
         View All →

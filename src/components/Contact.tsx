@@ -61,9 +61,9 @@ const Contact = () => {
                 key={i}
                 href={item.href}
                 target={item.href.startsWith("mailto") ? undefined : "_blank"}
-                className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
+                className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <span className="p-2 rounded-lg bg-purple-100 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 group-hover:bg-purple-200 dark:group-hover:bg-purple-500/20 transition-colors">
+                <span className="p-2 rounded-lg bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 group-hover:bg-blue-200 dark:group-hover:bg-blue-500/20 transition-colors">
                   {item.icon}
                 </span>
                 {item.label}
@@ -77,19 +77,19 @@ const Contact = () => {
           <Input
             type="text"
             placeholder="Your Name"
-            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-purple-500 dark:focus:border-purple-500 transition-colors rounded-xl h-11 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
+            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-blue-500 dark:focus:border-blue-500 transition-colors rounded-xl h-11 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
             value={userMessage.name}
             onChange={(e) => setUserMessage({ ...userMessage, name: e.target.value })}
           />
           <Input
             type="email"
             placeholder="Your Email Address"
-            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-purple-500 dark:focus:border-purple-500 transition-colors rounded-xl h-11 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
+            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-blue-500 dark:focus:border-blue-500 transition-colors rounded-xl h-11 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
             value={userMessage.email}
             onChange={(e) => setUserMessage({ ...userMessage, email: e.target.value })}
           />
           <Textarea
-            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-purple-500 dark:focus:border-purple-500 transition-colors rounded-xl h-36 resize-none text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
+            className="bg-white dark:bg-neutral-950/50 border-neutral-300 dark:border-neutral-800 focus:border-blue-500 dark:focus:border-blue-500 transition-colors rounded-xl h-36 resize-none text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400"
             placeholder="Tell me about your project or just say hello..."
             value={userMessage.message}
             onChange={(e) => setUserMessage({ ...userMessage, message: e.target.value })}
@@ -100,7 +100,7 @@ const Contact = () => {
             className={`flex items-center justify-center gap-2 w-full h-11 rounded-xl text-sm font-medium transition-all duration-200
               ${disable || loading
                 ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-500 cursor-not-allowed border border-neutral-200 dark:border-neutral-700"
-                : "bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-200 dark:shadow-purple-500/25 cursor-pointer"
+                : "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-200 dark:shadow-blue-500/25 cursor-pointer"
               }`}
           >
             {loading ? (

@@ -22,6 +22,19 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        primary: {
+          DEFAULT: colors.blue[600],
+          foreground: colors.white,
+        },
+        secondary: {
+          DEFAULT: colors.gray[600],
+          foreground: colors.white,
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
