@@ -1,96 +1,152 @@
-import { Code2, DatabaseZap, Wrench } from "lucide-react";
+import { Code2, DatabaseZap, Wrench, Server } from "lucide-react";
 
-type Skill = { name: string; lightColor: string; darkColor: string };
+type Skill = { name: string };
 
 const frontEnd: Skill[] = [
-  { name: "React.js",    lightColor: "text-cyan-700",    darkColor: "dark:text-cyan-400" },
-  { name: "Next.js",     lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "TypeScript",  lightColor: "text-blue-700",    darkColor: "dark:text-blue-400" },
-  { name: "JavaScript",  lightColor: "text-yellow-700",  darkColor: "dark:text-yellow-400" },
-  { name: "HTML5",       lightColor: "text-orange-700",  darkColor: "dark:text-orange-400" },
-  { name: "CSS3",        lightColor: "text-blue-600",    darkColor: "dark:text-blue-400" },
-  { name: "Tailwind",    lightColor: "text-teal-700",    darkColor: "dark:text-teal-400" },
-  { name: "Shadcn UI",   lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "Material UI", lightColor: "text-blue-700",    darkColor: "dark:text-blue-400" },
-  { name: "AceternityUI",lightColor: "text-blue-700",  darkColor: "dark:text-blue-400" },
-  { name: "Bootstrap",   lightColor: "text-blue-800",  darkColor: "dark:text-blue-400" },
+  { name: "React.js" },
+  { name: "Next.js" },
+  { name: "TypeScript" },
+  { name: "JavaScript" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "Tailwind" },
+  { name: "Shadcn UI" },
+  { name: "Material UI" },
+  { name: "Aceternity UI" },
+  { name: "Bootstrap" },
 ];
 
 const backEnd: Skill[] = [
-  { name: "Node.js",    lightColor: "text-green-700",   darkColor: "dark:text-green-400" },
-  { name: "Express.js", lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "Next.js",    lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "NextAuth",   lightColor: "text-indigo-700",  darkColor: "dark:text-indigo-400" },
-  { name: "Electron",   lightColor: "text-blue-600",    darkColor: "dark:text-blue-300" },
-  { name: "REST APIs",  lightColor: "text-amber-700",   darkColor: "dark:text-yellow-400" },
-  { name: "PHP",        lightColor: "text-indigo-600",  darkColor: "dark:text-indigo-400" },
-  { name: "Python",     lightColor: "text-amber-700",   darkColor: "dark:text-yellow-400" },
+  { name: "Node.js" },
+  { name: "Express.js" },
+  { name: "Next.js (API Routes)" },
+  { name: "NextAuth" },
+  { name: "Electron" },
+  { name: "REST APIs" },
+  { name: "PHP" },
+  { name: "Python" },
 ];
 
 const databases: Skill[] = [
-  { name: "MongoDB",    lightColor: "text-green-700",   darkColor: "dark:text-green-500" },
-  { name: "PostgreSQL", lightColor: "text-blue-700",    darkColor: "dark:text-blue-400" },
-  { name: "MySQL",      lightColor: "text-blue-600",    darkColor: "dark:text-blue-300" },
-  { name: "SQLite",     lightColor: "text-sky-700",     darkColor: "dark:text-sky-400" },
-  { name: "Firebase",   lightColor: "text-orange-600",  darkColor: "dark:text-orange-400" },
-  { name: "Prisma ORM", lightColor: "text-teal-700",    darkColor: "dark:text-teal-400" },
+  { name: "MongoDB" },
+  { name: "PostgreSQL" },
+  { name: "MySQL" },
+  { name: "SQLite" },
+  { name: "Firebase" },
+  { name: "Prisma ORM" },
 ];
 
 const tools: Skill[] = [
-  { name: "Git",          lightColor: "text-orange-700",  darkColor: "dark:text-orange-400" },
-  { name: "GitHub",       lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "CI/CD",        lightColor: "text-green-700",   darkColor: "dark:text-green-400" },
-  { name: "Vercel",       lightColor: "text-neutral-800", darkColor: "dark:text-neutral-200" },
-  { name: "Stripe",       lightColor: "text-blue-700",  darkColor: "dark:text-blue-400" },
-  { name: "Sanity CMS",   lightColor: "text-red-600",     darkColor: "dark:text-red-400" },
-  { name: "Offline-first",lightColor: "text-teal-700",    darkColor: "dark:text-teal-300" },
-  { name: "Multi-store",  lightColor: "text-pink-700",    darkColor: "dark:text-pink-400" },
+  { name: "Git" },
+  { name: "GitHub" },
+  { name: "CI/CD" },
+  { name: "Vercel" },
+  { name: "Stripe" },
+  { name: "Sanity CMS" },
+  { name: "Offline-first" },
+  { name: "Multi-store" },
 ];
 
-const SkillBadge = ({ name, lightColor, darkColor }: Skill) => (
-  <span
-    className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold
-      bg-white dark:bg-neutral-900
-      border border-neutral-200 dark:border-neutral-800
-      hover:border-blue-400 dark:hover:border-blue-500/50
-      hover:bg-blue-50 dark:hover:bg-blue-500/5
-      shadow-sm transition-all duration-200 cursor-default
-      ${lightColor} ${darkColor}`}
-  >
-    {name}
-  </span>
-);
+type CategoryAccent = {
+  icon: React.ReactNode;
+  title: string;
+  skills: Skill[];
+  accent: string; // single accent color per category, used sparingly
+};
 
-const categories = [
+const categories: CategoryAccent[] = [
   {
     icon: <Code2 size={16} />,
     title: "Front-End",
     skills: frontEnd,
-    cardClass: "bg-gray-50 dark:bg-gray-800 border-blue-200 dark:border-blue-500/20",
-    iconClass: "bg-cyan-100 dark:bg-white/5 text-cyan-700 dark:text-cyan-400",
+    accent: "cyan",
   },
   {
-    icon: <DatabaseZap size={16} />,
+    icon: <Server size={16} />,
     title: "Back-End",
     skills: backEnd,
-    cardClass: "bg-gray-50 dark:bg-gray-800 border-green-200 dark:border-green-500/20",
-    iconClass: "bg-green-100 dark:bg-white/5 text-green-700 dark:text-green-400",
+    accent: "violet",
   },
   {
     icon: <DatabaseZap size={16} />,
     title: "Databases",
     skills: databases,
-    cardClass: "bg-gray-50 dark:bg-gray-800 border-blue-200 dark:border-blue-500/20",
-    iconClass: "bg-blue-100 dark:bg-white/5 text-blue-700 dark:text-blue-400",
+    accent: "emerald",
   },
   {
     icon: <Wrench size={16} />,
     title: "Tools & DevOps",
     skills: tools,
-    cardClass: "bg-gray-50 dark:bg-gray-800 border-orange-200 dark:border-orange-500/20",
-    iconClass: "bg-orange-100 dark:bg-white/5 text-orange-700 dark:text-orange-400",
+    accent: "amber",
   },
 ];
+
+// Tailwind needs literal class names, so map accent -> static class strings
+// rather than building them with string interpolation.
+const accentStyles: Record<
+  string,
+  {
+    card: string;
+    icon: string;
+    text: string;
+    badgeBorder: string;
+    badgeHover: string;
+  }
+> = {
+  cyan: {
+    card: "border-cyan-100 dark:border-cyan-500/10",
+    icon: "bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400",
+    text: "text-cyan-600/90 dark:text-cyan-400/80",
+    badgeBorder: "border-neutral-200 dark:border-neutral-800",
+    badgeHover:
+      "hover:border-cyan-200 hover:bg-cyan-50/50 dark:hover:border-cyan-500/25 dark:hover:bg-cyan-500/5",
+  },
+  violet: {
+    card: "border-violet-100 dark:border-violet-500/10",
+    icon: "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400",
+    text: "text-violet-600/90 dark:text-violet-400/80",
+    badgeBorder: "border-neutral-200 dark:border-neutral-800",
+    badgeHover:
+      "hover:border-violet-200 hover:bg-violet-50/50 dark:hover:border-violet-500/25 dark:hover:bg-violet-500/5",
+  },
+  emerald: {
+    card: "border-emerald-100 dark:border-emerald-500/10",
+    icon: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400",
+    text: "text-emerald-600/90 dark:text-emerald-400/80",
+    badgeBorder: "border-neutral-200 dark:border-neutral-800",
+    badgeHover:
+      "hover:border-emerald-200 hover:bg-emerald-50/50 dark:hover:border-emerald-500/25 dark:hover:bg-emerald-500/5",
+  },
+  amber: {
+    card: "border-amber-100 dark:border-amber-500/10",
+    icon: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400",
+    text: "text-amber-600/90 dark:text-amber-400/80",
+    badgeBorder: "border-neutral-200 dark:border-neutral-800",
+    badgeHover:
+      "hover:border-amber-200 hover:bg-amber-50/50 dark:hover:border-amber-500/25 dark:hover:bg-amber-500/5",
+  },
+};
+
+const SkillBadge = ({
+  name,
+  text,
+  badgeBorder,
+  badgeHover,
+}: {
+  name: string;
+  text: string;
+  badgeBorder: string;
+  badgeHover: string;
+}) => (
+  <span
+    className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium
+      bg-white dark:bg-neutral-900
+      border shadow-sm transition-colors duration-150 cursor-default
+      ${text} ${badgeBorder} ${badgeHover}`}
+  >
+    {name}
+  </span>
+);
 
 const Skill = () => {
   return (
@@ -105,21 +161,35 @@ const Skill = () => {
       </div>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {categories.map((cat, idx) => (
-          <div key={idx} className={`rounded-2xl border p-5 ${cat.cardClass}`}>
-            <div className="flex items-center gap-2 mb-4">
-              <span className={`p-1.5 rounded-lg ${cat.iconClass}`}>
-                {cat.icon}
-              </span>
-              <h3 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200">{cat.title}</h3>
+        {categories.map((cat) => {
+          const style = accentStyles[cat.accent];
+          return (
+            <div
+              key={cat.title}
+              className={`rounded-2xl border bg-gray-50 dark:bg-gray-800 p-5 ${style.card}`}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <span className={`p-1.5 rounded-lg ${style.icon}`}>
+                  {cat.icon}
+                </span>
+                <h3 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200">
+                  {cat.title}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <SkillBadge
+                    key={skill.name}
+                    name={skill.name}
+                    text={style.text}
+                    badgeBorder={style.badgeBorder}
+                    badgeHover={style.badgeHover}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {cat.skills.map((skill, i) => (
-                <SkillBadge key={i} {...skill} />
-              ))}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

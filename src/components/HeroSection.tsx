@@ -9,12 +9,8 @@ export function HeroSection() {
   const words = [
     { text: "Full" },
     { text: "Stack" },
-    { text: "MERN", className: "text-blue-600 dark:text-blue-400" },
-    { text: "+" },
-    { text: "Next.js", className: "text-blue-600 dark:text-blue-400" },
-    { text: "Developer" },
+    { text: "Developer", className: "text-blue-600 dark:text-blue-400" },
   ];
-
   return (
     <div className="min-h-[90vh] flex items-center justify-center px-6">
       <div className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">

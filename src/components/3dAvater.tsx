@@ -47,29 +47,19 @@ export default function Avatar3D() {
           transformStyle: "preserve-3d",
         }}
       >
-        {/* Inner dashed ring */}
-        <div className="absolute inset-[-8px] rounded-full border-2 border-dashed border-blue-400/50 animate-spin-slow" />
-        {/* Inner solid ring */}
-        <div className="absolute inset-[-16px] rounded-full border border-blue-400/30 animate-spin-reverse" />
+        {/* Simplified inner styling */}
+          <div className="absolute inset-[-4px] rounded-full border border-gray-300/30" />
 
-        {/* Pulsing conic glow halo */}
+
+        {/* Refined gradient border for a polished look */}
         <div
-          className="absolute inset-[-8px] rounded-full opacity-20 blur-lg animate-pulse-ring"
+          className="absolute inset-0 rounded-full p-[2px] animate-gradient-spin"
           style={{
             background:
-              "conic-gradient(from 0deg, #3b82f6, #3b82f6, #22d3ee, #ec4899, #3b82f6)",
-          }}
-        />
-
-        {/* Animated gradient border */}
-        <div
-          className="absolute inset-0 rounded-full p-[3px] animate-gradient-spin"
-          style={{
-            background:
-              "linear-gradient(135deg, #3b82f6, #3b82f6, #22d3ee, #3b82f6)",
-            backgroundSize: "300% 300%",
+              "linear-gradient(135deg, #3b82f6, #60a5fa, #22d3ee, #60a5fa)",
+            backgroundSize: "200% 200%",
             boxShadow:
-              "0 0 40px rgba(168,85,247,0.5), 0 0 80px rgba(59,130,246,0.2)",
+              "0 0 20px rgba(59,130,246,0.3), 0 0 40px rgba(59,130,246,0.15)",
           }}
         >
           <div className="w-full h-full rounded-full bg-background" />
